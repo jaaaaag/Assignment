@@ -11,7 +11,7 @@ public class EmployeeMain {
 		Employee e = (Employee) context.getBean("employee");
 		Employee e2 = (Employee) context.getBean("employee2");
 		e.getEmployeeInfo();
-		e2	.getEmployeeInfo();
+		e2.getEmployeeInfo();
 
 	}
 

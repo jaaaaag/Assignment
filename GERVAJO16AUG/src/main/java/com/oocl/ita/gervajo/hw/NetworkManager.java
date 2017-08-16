@@ -8,8 +8,7 @@ import java.net.URLConnection;
 public class NetworkManager {
 	
 	private String link;
-	private URL httpUrl;
-	private URLConnection urlConn;
+
 	
 	public String getLink() {
 		return link;
@@ -19,27 +18,13 @@ public class NetworkManager {
 		this.link = link;
 	}
 
-	public URL getHttpUrl() {
-		return httpUrl;
-	}
-
-	public void setHttpUrl(String link) throws MalformedURLException {
-		this.httpUrl = new URL(link);
-	}
-	
-	private void setUrlConn(URL httpUrl) throws IOException{
-		this.urlConn = httpUrl.openConnection();
-	}
-
-
-	public void init(URLConnection urlConn) throws IOException {
-		System.out.println("Bean is going through initialization...");
-		urlConn.connect();
+	public void init(){
+		System.out.println("HTTP is going through initialization...");
 
 	}
 
-	public void destroy(URLConnection urlConn) {
-		System.out.println("Bean will be destroyed now.");
+	public void destroy() {
+		System.out.println("HTTP connection will be destroyed now.");
 	}
 
 }

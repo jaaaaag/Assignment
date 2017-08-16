@@ -20,19 +20,21 @@
 
 	<bean id="triangle" class="com.oocl.ita.gervajo.sw.Triangle">
 	</bean>
+	
+	<bean id="company" class="com.oocl.ita.gervajo.hw.Company">
+		<property name="companyName" value="OOCL" />
+	</bean>
 
 	<bean id="employee" class="com.oocl.ita.gervajo.sw.Employee"
 		scope="prototype">
 		<property name="name" value="Jag" />
-		<property name="role" value="Nothing" />
-		<property name="id" value="6969696969" />
 	</bean>
 
-	<bean id="employee2" class="com.oocl.ita.gervajo.sw.Employee"
+	<bean id="employee2" class="com.oocl.ita.gervajo.sw.Employee" parent = "employee"
 		scope="prototype">
-		<property name="name" value="Test Employee" />
-		<property name="role" value="Programmer" />
-		<property name="id" value="123456789" />
+		<property name="role" value="Nothing" />
+		<property name="id" value="6969696969" />
+	
 	</bean>
 
 	<bean id="classA" class="com.oocl.ita.gervajo.hw.ClassA">
